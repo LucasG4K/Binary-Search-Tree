@@ -1,10 +1,10 @@
 #include "tree.hpp"
 
-Node *initializeTree() {
+Node* Tree::initializeTree() {
     return NULL;
 }
 
-void insertValueOnTree(Node **node, Item requestedValue) {
+void Tree::insertValueOnTree(Node **node, Item requestedValue) {
     if (*node == NULL) {
         *node          = (Node*)malloc(sizeof(Node));
         (*node)->item  = requestedValue;
@@ -19,11 +19,11 @@ void insertValueOnTree(Node **node, Item requestedValue) {
     }
 }
 
-void removeValueFromTree(Node *node, Item requestedValue){
+void Tree::removeValueFromTree(Node *node, Item requestedValue){
 
 }
 
-void preOrderPrintTree(Node *node){
+void Tree::preOrderPrintTree(Node *node){
     if (node != NULL) {
         preOrderPrintTree(node->left);
         preOrderPrintTree(node->right);
@@ -31,7 +31,7 @@ void preOrderPrintTree(Node *node){
     }
 }
 
-void inOrderPrintTree(Node *node){
+void Tree::inOrderPrintTree(Node *node){
     if (node != NULL) {
         inOrderPrintTree(node->left);
         cout << node->item.value << " ";
@@ -39,7 +39,7 @@ void inOrderPrintTree(Node *node){
     }
 }
 
-void postOrderPrintTree(Node *node){
+void Tree::postOrderPrintTree(Node *node){
     if (node != NULL) {
         cout << node->item.value << " ";
         postOrderPrintTree(node->left);
