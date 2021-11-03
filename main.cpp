@@ -32,4 +32,6 @@ int main() {
     tree.removeValue(&node, item);
     cout << endl <<  "By removing " << item.value << ", the new tree remains like: ";
     tree.postOrderPrint(node);
+
+    return 0;
 }
