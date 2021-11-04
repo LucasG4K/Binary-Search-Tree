@@ -1,6 +1,5 @@
 #ifndef TREE_HPP
 #define TREE_HPP
-
 #include <iostream>
 using namespace std;
 
@@ -24,9 +23,9 @@ public:
     void nextChild(Node **node, Node *temp);                    // chose left child to verification and point to the most deeper right branch on the sequence to swap (it could do the opposite)
     void search(Node **node, Node **temp, Item requestedValue); // search for an exclusive value on the tree
     
-    void preOrderPrint(Node *node);                             // print tree PreOrder
-    void inOrderPrint(Node *node);                              //  ...  .... InOrder
-    void postOrderPrint(Node *node);                            //  ...  .... PostOrder
+    void preOrderPrint(Node *node);                             // print the PreOrder tree
+    void inOrderPrint(Node *node);                              //  ...  ... InOrder   ..
+    void postOrderPrint(Node *node);                            //  ...  ... PostOrder ..
 };
 
 #endif
